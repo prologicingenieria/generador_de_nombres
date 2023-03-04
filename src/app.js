@@ -1,11 +1,13 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
-
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+function generarDominio() {
+  var pronoun = ["the", "our"];
+  var adj = ["great", "big"];
+  var noun = ["jogger", "racoon"];
+  var dot = [".cl", ".com", ".es", "org"];
+  var dominio =
+    "www." +
+    pronoun[Math.floor(Math.random() * pronoun.length)] +
+    adj[Math.floor(Math.random() * adj.length)] +
+    noun[Math.floor(Math.random() * noun.length)] +
+    dot[Math.floor(Math.random() * dot.length)];
+  document.getElementById("nombreGenerado").innerHTML = dominio;
+}
